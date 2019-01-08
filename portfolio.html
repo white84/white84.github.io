@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Portfolio | Мои работы</title>
+    <link rel="stylesheet" href="main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="maincontent">
+        <section class="hero">
+          <header class="header">
+            <div class="header__socials">
+              <ul class="socials">
+                <li class="socials__item"><a class="social__link" href="https://vk.com/id436024674" target="_blank">
+                    <!--+icon(social, 'socials__icon')-->
+                    <div class="socials__icon inlined-svg-vk"></div></a></li>
+                <li class="socials__item"><a class="social__link" href="https://github.com/white84" target="_blank">
+                    <!--+icon(social, 'socials__icon')-->
+                    <div class="socials__icon inlined-svg-github"></div></a></li>
+                <li class="socials__item"><a class="social__link" href="https://ru.linkedin.com/" target="_blank">
+                    <!--+icon(social, 'socials__icon')-->
+                    <div class="socials__icon inlined-svg-in"></div></a></li>
+              </ul>
+            </div>
+            <div class="header__menu"><a class="hamburger" href="">
+                <div class="inlined-svg-hamburger"></div></a></div>
+          </header>
+          <div class="hero__content"><img class="title-img" src="/assets/images/titles/portfolio-header.png" alt="page title"/>
+            <div class="hero__user-desc">
+              <div class="user">
+                <div class="user__pic-container">
+                  <div class="user_pic"><img class="user_pic-img" src="/assets/images/content/user.jpg" alt="user pic"/>
+                  </div>
+                </div>
+                <div class="user__info"> 
+                  <div class="user__name">Лашин Александр</div>
+                  <div class="user__desc">Личный сайт разработчика</div>
+                </div>
+              </div>
+            </div><a class="href" href="#works">
+              <div class="hero__arrow-down inlined-svg-arrow-down"> </div></a>
+          </div>
+        </section>
+        <section class="works"><a name="works"></a>
+          <div class="works__triangle">
+            <div class="works__col">
+              <svg class="triangle--svg-left-triagle" viewbox="0 0 1000 150">
+                <polygon points="0 0, 1000 150, 0 150"></polygon>
+              </svg>
+            </div>
+            <div class="works__col">
+              <svg class="triangle--svg-right-triagle" viewbox="0 0 1000 150">
+                <polygon points="0 150, 1000 0, 1000 150"></polygon>
+              </svg>
+            </div>
+          </div>
+          <div class="works__title">
+            <h1 class="title">Мои работы</h1>
+          </div>
+          <div class="works__slider">
+            <div class="slider">
+              <div class="slider__col slider__col--left"> 
+                <div class="slider-details">
+                  <div class="slider-details__title">
+                    <h2 class="title">Сайт школы онлайн образования</h2>
+                  </div>
+                  <div class="slider-details__description">
+                    <p>html, css, javascript</p>
+                  </div>
+                  <div class="slider-details__action">
+                    <div class="button button--before-icon-link">Посмотреть сайт</div>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__col slider__col--rigth"> 
+                <div class="slider-preview">
+                  <div class="slider-preview__img"></div>
+                  <div class="slider-preview__nav">
+                    <div class="slider-preview__down">
+                      <div class="slider-preview__bt slider-preview__bt--down">
+                        <div class="inlined-svg-arrow-down"></div>
+                      </div>
+                    </div>
+                    <div class="slider-preview__up">
+                      <div class="slider-preview__bt slider-preview__bt--up">
+                        <div class="inlined-svg-arrow-up"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <sections class="recommendations">
+          <div class="recommendations__title">
+            <h1 class="title">Что обо мне говорят</h1>
+          </div>
+          <div class="recommendations__row">
+            <div class="recommendations__col"> <i class="icon fa-quote-left"></i>
+              <div class="desc">Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</div>
+              <div class="user user--flex-direction-row">
+                <div class="user__pic-container">
+                  <div class="user_pic"><img class="user_pic-img" src="/assets/images/content/user1.jpg" alt="user pic"/>
+                  </div>
+                </div>
+                <div class="user__info"> 
+                  <div class="user__name">Ковальчук Дмитрий</div>
+                  <div class="user__desc">основатель Loftschool</div>
+                </div>
+              </div>
+            </div>
+            <div class="recommendations__col"> <i class="icon fa-quote-left"></i>
+              <div class="desc">Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!</div>
+              <div class="user user--flex-direction-row">
+                <div class="user__pic-container">
+                  <div class="user_pic"><img class="user_pic-img" src="/assets/images/content/user2.jpg" alt="user pic"/>
+                  </div>
+                </div>
+                <div class="user__info"> 
+                  <div class="user__name">Сабанцев Владимир</div>
+                  <div class="user__desc">преподаватель</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="recommendations__feedback">
+            <form class="feedback">
+              <div class="feedback__title">
+                <h2 class="title">Связаться со мной</h2>
+              </div>
+              <div class="feedback__name">
+                <input class="name" name="name" placeholder="Имя">
+              </div>
+              <div class="feedback__email">
+                <input class="email" name="email" placeholder="Email">
+              </div>
+              <div class="feedback__message">
+                <textarea class="message" name="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+              </div>
+              <div class="feedback__actions"> 
+                <div class="button button--left">Отправить</div>
+                <div class="button button--right">Очистить</div>
+              </div>
+            </form>
+          </div>
+        </sections>
+      </div>
+      <footer class="footer">
+        <div class="footer__row">
+          <div class="footer__col">
+            <ul class="menu">
+              <il class="menu__item"><a class="menu_link" href="portfolio.html">Мои работы</a></il>
+              <il class="menu__item"><a class="menu_link" href="about.html">Обо мне</a></il>
+              <il class="menu__item"><a class="menu_link" href="blog.html">Блог</a></il>
+              <il class="menu__item"><a class="menu_link" href="index.html">Авторизация</a></il>
+            </ul>
+          </div>
+          <div class="footer__col footer__col--justify-end">
+            <ul class="socials">
+              <li class="socials__item socials__item--round"><a class="social__link" href="https://vk.com/id436024674" target="_blank">
+                  <!--+icon(social, 'socials__icon')-->
+                  <div class="socials__icon inlined-svg-vk"></div></a></li>
+              <li class="socials__item socials__item--round"><a class="social__link" href="https://github.com/white84" target="_blank">
+                  <!--+icon(social, 'socials__icon')-->
+                  <div class="socials__icon inlined-svg-github"></div></a></li>
+              <li class="socials__item socials__item--round"><a class="social__link" href="https://ru.linkedin.com/" target="_blank">
+                  <!--+icon(social, 'socials__icon')-->
+                  <div class="socials__icon inlined-svg-in"></div></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__row">
+          <div class="footer__col"> Я веб-разработчик из Подольска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </div>
+          <div class="footer__col footer__col--justify-end">© Лашин Александр | создано с любовью в LoftSchool | 2019</div>
+        </div>
+      </footer>
+    </div>
+    <script src="bootloader.bundle.js"></script>
+    <script src="vendor.bundle.js"></script>
+  </body>
+</html>

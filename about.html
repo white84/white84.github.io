@@ -46,15 +46,13 @@
         </section>
         <section class="about"><a name="about"></a>
           <div class="about__col about__col--background-white">
-            <div class="about__triangle">
-              <svg class="triangle--svg-left-triagle" viewbox="0 0 1000 150">
-                <polygon points="0 0, 1000 150, 0 150"></polygon>
-              </svg>
-            </div>
-            <div class="about__left-title">
-              <h1 class="title">Обо мне</h1>
-            </div>
+            <svg class="triangle--svg-left-triagle" viewbox="0 0 1000 150">
+              <polygon points="0 0, 1000 150, 0 150"></polygon>
+            </svg>
             <div class="about__user-info">
+              <div class="about__left-title">
+                <h1 class="title">Обо мне</h1>
+              </div>
               <div class="user-info">
                 <div class="user-info__avatar"><img class="user-info__avatar_pic" src="/assets/images/content/user-pic.jpg" alt="user avatar"/>
                 </div>
@@ -69,11 +67,9 @@
             </div>
           </div>
           <div class="about__col about__col--background-beige">
-            <div class="about__triangle">
-              <svg class="triangle--svg-right-triagle" viewbox="0 0 1000 150">
-                <polygon points="0 150, 1000 0, 1000 150"></polygon>
-              </svg>
-            </div>
+            <svg class="triangle--svg-right-triagle" viewbox="0 0 1000 150">
+              <polygon points="0 150, 1000 0, 1000 150"></polygon>
+            </svg>
             <div class="about__right-title">
               <h2 class="subtitle">Чем я могу быть вам полезен</h2>
             </div>
@@ -207,54 +203,57 @@
             </div>
           </div>
         </section>
-        <section class="contacts">        
-          <div class="contacts__map"></div>
-          <div class="contacts__pop-up">
-            <div class="user-contacts">
-              <div class="user-contacts__title">
-                <h2 class="subtitle">Контакты</h2>
-              </div><a class="contact" href="skype:echo123?call" target="_blank">
-                <div class="contact__icon inlined-svg-skype"></div>
-                <div class="contact__text">white white</div></a><a class="contact" href="mailto:lashin.sasha@gmail.com" target="_blank">
-                <div class="contact__icon inlined-svg-envelope"></div>
-                <div class="contact__text">lashin.sasha@gmail.com</div></a><a class="contact" href="tel:+79851619766" target="_blank">
-                <div class="contact__icon inlined-svg-phone"></div>
-                <div class="contact__text">+79851619766</div></a><a class="contact" href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0,+4,+%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@55.430827,37.5399663,17z/data=!3m1!4b1!4m5!3m4!1s0x414aa83872d05f41:0xed3b379c332d60b1!8m2!3d55.430827!4d37.542155" target="_blank">
-                <div class="contact__icon inlined-svg-map_marker"></div>
-                <div class="contact__text">г. Подольск ул. Кирова 4</div></a>
+        <section class="contacts">
+          <div class="contacts__header"></div>
+          <div class="contacts__content">
+            <div class="contacts__pop-up">
+              <div class="user-contacts">
+                <div class="user-contacts__title">
+                  <h2 class="subtitle">Контакты</h2>
+                </div><a class="contact" href="skype:echo123?call" target="_blank">
+                  <div class="contact__icon inlined-svg-skype"></div>
+                  <div class="contact__text">white white    </div></a><a class="contact" href="mailto:lashin.sasha@gmail.com" target="_blank">
+                  <div class="contact__icon inlined-svg-envelope"></div>
+                  <div class="contact__text">lashin.sasha@gmail.com    </div></a><a class="contact" href="tel:+79851619766" target="_blank">
+                  <div class="contact__icon inlined-svg-phone"></div>
+                  <div class="contact__text">+79851619766    </div></a><a class="contact" href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9A%D0%B8%D1%80%D0%BE%D0%B2%D0%B0,+4,+%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D1%8C%D1%81%D0%BA,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB./@55.430827,37.5399663,17z/data=!3m1!4b1!4m5!3m4!1s0x414aa83872d05f41:0xed3b379c332d60b1!8m2!3d55.430827!4d37.542155" target="_blank">
+                  <div class="contact__icon inlined-svg-map_marker"></div>
+                  <div class="contact__text">г. Подольск ул. Кирова 4    </div></a>
+              </div>
             </div>
           </div>
+          <footer class="footer">
+            <div class="footer__row">
+              <div class="footer__col">
+                <ul class="menu">
+                  <il class="menu__item"><a class="menu_link" href="portfolio.html">Мои работы</a></il>
+                  <il class="menu__item"><a class="menu_link" href="about.html">Обо мне</a></il>
+                  <il class="menu__item"><a class="menu_link" href="blog.html">Блог</a></il>
+                  <il class="menu__item"><a class="menu_link" href="index.html">Авторизация</a></il>
+                </ul>
+              </div>
+              <div class="footer__col footer__col--justify-end">
+                <ul class="socials">
+                  <li class="socials__item socials__item--round"><a class="social__link" href="https://vk.com/id436024674" target="_blank">
+                      <!--+icon(social, 'socials__icon')-->
+                      <div class="socials__icon inlined-svg-vk"></div></a></li>
+                  <li class="socials__item socials__item--round"><a class="social__link" href="https://github.com/white84" target="_blank">
+                      <!--+icon(social, 'socials__icon')-->
+                      <div class="socials__icon inlined-svg-github"></div></a></li>
+                  <li class="socials__item socials__item--round"><a class="social__link" href="https://ru.linkedin.com/" target="_blank">
+                      <!--+icon(social, 'socials__icon')-->
+                      <div class="socials__icon inlined-svg-in"></div></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__row">
+              <div class="footer__col"> Я веб-разработчик из Подольска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </div>
+              <div class="footer__col footer__col--justify-end">© Лашин Александр | создано с любовью в LoftSchool | 2019</div>
+            </div>
+          </footer>
         </section>
       </div>
-      <footer class="footer">
-        <div class="footer__row">
-          <div class="footer__col">
-            <ul class="menu">
-              <il class="menu__item"><a class="menu_link" href="portfolio.html">Мои работы</a></il>
-              <il class="menu__item"><a class="menu_link" href="about.html">Обо мне</a></il>
-              <il class="menu__item"><a class="menu_link" href="blog.html">Блог</a></il>
-              <il class="menu__item"><a class="menu_link" href="index.html">Авторизация</a></il>
-            </ul>
-          </div>
-          <div class="footer__col footer__col--justify-end">
-            <ul class="socials">
-              <li class="socials__item socials__item--round"><a class="social__link" href="https://vk.com/id436024674" target="_blank">
-                  <!--+icon(social, 'socials__icon')-->
-                  <div class="socials__icon inlined-svg-vk"></div></a></li>
-              <li class="socials__item socials__item--round"><a class="social__link" href="https://github.com/white84" target="_blank">
-                  <!--+icon(social, 'socials__icon')-->
-                  <div class="socials__icon inlined-svg-github"></div></a></li>
-              <li class="socials__item socials__item--round"><a class="social__link" href="https://ru.linkedin.com/" target="_blank">
-                  <!--+icon(social, 'socials__icon')-->
-                  <div class="socials__icon inlined-svg-in"></div></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__row">
-          <div class="footer__col"> Я веб-разработчик из Подольска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. </div>
-          <div class="footer__col footer__col--justify-end">© Лашин Александр | создано с любовью в LoftSchool | 2019</div>
-        </div>
-      </footer>
+      <!--include ./common/footer.pug-->
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

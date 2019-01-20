@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+
+<script type="text/x-template" id="skills-list">
+  <ul class="skills">
+    <li class="skills__item" v-for="skillsGroupObject in skills">
+      <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+    </li>
+  </ul>
+</script>
+<script type="text/x-template" id="skills-item">
+  <div class="skills-row">
+    <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+    <ul class="skills-row__list">
+      <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+        <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+      </li>
+    </ul>
+  </div>
+</script>
+<script type="text/x-template" id="skill">
+  <div class="skill">
+    <div class="skill__progress-bar" v-bind:title="skillTitle">
+      <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+        <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+        <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+      </svg>
+    </div>
+  </div>
+</script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -56,7 +83,7 @@
           </div>
           <div class="works__slider">
             <div class="slider">
-              <div class="slider__col slider__col--left"> 
+              <div class="slider__details">
                 <div class="slider-details">
                   <div class="slider-details__title">
                     <h2 class="title">Сайт школы онлайн образования</h2>
@@ -69,21 +96,13 @@
                   </div>
                 </div>
               </div>
-              <div class="slider__col slider__col--rigth"> 
-                <div class="slider-preview">
-                  <div class="slider-preview__img"></div>
-                  <div class="slider-preview__nav">
-                    <div class="slider-preview__down">
-                      <div class="slider-preview__bt slider-preview__bt--down">
-                        <div class="inlined-svg-arrow-down"></div>
-                      </div>
-                    </div>
-                    <div class="slider-preview__up">
-                      <div class="slider-preview__bt slider-preview__bt--up">
-                        <div class="inlined-svg-arrow-up"></div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="slider__preview"> <img class="slider-preview" src="assets/images/bg/slider-preview-img.png" alt="картинка"></div>
+              <div class="slider__nav">
+                <div class="slider-nav__down"><img class="slider-preview" src="assets/images/bg/slider-down.png" alt="картинка">
+                  <div class="inlined-svg-arrow-down"> </div>
+                </div>
+                <div class="slider-nav__up">
+                  <div class="inlined-svg-arrow-up"> </div><img class="slider-preview" src="assets/images/bg/slider-up.png" alt="картинка">
                 </div>
               </div>
             </div>
@@ -182,6 +201,33 @@
         </sections>
       </div>
       <!--include ./common/footer.pug-->
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills">
+          <li class="skills__item" v-for="skillsGroupObject in skills">
+            <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-item">
+        <div class="skills-row">
+          <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+          <ul class="skills-row__list">
+            <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+              <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <div class="skill__progress-bar" v-bind:title="skillTitle">
+            <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+              <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+            </svg>
+          </div>
+        </div>
+      </script>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

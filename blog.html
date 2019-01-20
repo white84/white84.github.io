@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+
+<script type="text/x-template" id="skills-list">
+  <ul class="skills">
+    <li class="skills__item" v-for="skillsGroupObject in skills">
+      <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+    </li>
+  </ul>
+</script>
+<script type="text/x-template" id="skills-item">
+  <div class="skills-row">
+    <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+    <ul class="skills-row__list">
+      <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+        <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+      </li>
+    </ul>
+  </div>
+</script>
+<script type="text/x-template" id="skill">
+  <div class="skill">
+    <div class="skill__progress-bar" v-bind:title="skillTitle">
+      <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+        <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+        <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+      </svg>
+    </div>
+  </div>
+</script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -143,6 +170,33 @@
         </section>
       </div>
       <!--include ./common/footer.pug-->
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills">
+          <li class="skills__item" v-for="skillsGroupObject in skills">
+            <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-item">
+        <div class="skills-row">
+          <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+          <ul class="skills-row__list">
+            <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+              <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <div class="skill__progress-bar" v-bind:title="skillTitle">
+            <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+              <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+            </svg>
+          </div>
+        </div>
+      </script>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

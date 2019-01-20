@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+
+<script type="text/x-template" id="skills-list">
+  <ul class="skills">
+    <li class="skills__item" v-for="skillsGroupObject in skills">
+      <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+    </li>
+  </ul>
+</script>
+<script type="text/x-template" id="skills-item">
+  <div class="skills-row">
+    <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+    <ul class="skills-row__list">
+      <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+        <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+      </li>
+    </ul>
+  </div>
+</script>
+<script type="text/x-template" id="skill">
+  <div class="skill">
+    <div class="skill__progress-bar" v-bind:title="skillTitle">
+      <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+        <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+        <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+      </svg>
+    </div>
+  </div>
+</script><!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -77,129 +104,7 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio culpa quas possimus veritatis cupiditate impedit doloribus quo, consequuntur alias, porro sequi optio nemo. Quia fugit quisquam voluptatibus animi libero vero?</p>
             </div>
             <div class="about__content">
-              <ul class="skills">
-                <li class="skills__item">
-                  <div class="skills-row">
-                    <div class="skills-row__title">Frontend</div>
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="HTML">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 172.78759594743863px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="CSS">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 219.9114857512855px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="JavaScript &amp; JQuery">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 62.83185307179586px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="skills__item">
-                  <div class="skills-row">
-                    <div class="skills-row__title">Backend</div>
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="PHP">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 172.78759594743863px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="mySql">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 219.9114857512855px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="Node.js &amp; npm">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 62.83185307179586px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="Mongo.db">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 62.83185307179586px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li class="skills__item">
-                  <div class="skills-row">
-                    <div class="skills-row__title">WorkFlow</div>
-                    <ul class="skills-row__list">
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="Git">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 172.78759594743863px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="Gulp">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 219.9114857512855px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="skill-row__item">
-                        <div class="skill">
-                          <div class="skill__progress-bar" title="Bower">
-                            <svg class="skill__progress" viewPort="0 0 100 100">
-                              <circle class="skill__circle" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0"></circle>
-                              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" stroke-dasharray="314.2" stroke-dashoffset="0" style="stroke-dashoffset: 62.83185307179586px;"></circle>
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+              <div id="skills-component"></div>
             </div>
           </div>
         </section>
@@ -254,6 +159,33 @@
         </section>
       </div>
       <!--include ./common/footer.pug-->
+      <script type="text/x-template" id="skills-list">
+        <ul class="skills">
+          <li class="skills__item" v-for="skillsGroupObject in skills">
+            <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
+          </li>
+        </ul>
+      </script>
+      <script type="text/x-template" id="skills-item">
+        <div class="skills-row">
+          <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
+          <ul class="skills-row__list">
+            <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
+              <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
+            </li>
+          </ul>
+        </div>
+      </script>
+      <script type="text/x-template" id="skill">
+        <div class="skill">
+          <div class="skill__progress-bar" v-bind:title="skillTitle">
+            <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
+              <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
+              <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
+            </svg>
+          </div>
+        </div>
+      </script>
     </div>
     <script src="bootloader.bundle.js"></script>
     <script src="vendor.bundle.js"></script>

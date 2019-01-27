@@ -1,31 +1,4 @@
-
-<script type="text/x-template" id="skills-list">
-  <ul class="skills">
-    <li class="skills__item" v-for="skillsGroupObject in skills">
-      <skills-row :skillsGroupObject="skillsGroupObject"></skills-row>
-    </li>
-  </ul>
-</script>
-<script type="text/x-template" id="skills-item">
-  <div class="skills-row">
-    <div class="skills-row__title">{{skillsGroupObject.skillsGroup}}</div>
-    <ul class="skills-row__list">
-      <li class="skill-row__item" v-for="(skillPersentage, skillTitle) in skillsGroupObject.skills">
-        <skill :skillPersentage="skillPersentage" :skillTitle="skillTitle"></skill>
-      </li>
-    </ul>
-  </div>
-</script>
-<script type="text/x-template" id="skill">
-  <div class="skill">
-    <div class="skill__progress-bar" v-bind:title="skillTitle">
-      <svg class="skill__progress" viewPort="0 0 100 100" preserveAspectRatio="none">
-        <circle class="skill__circle" r="50" cx="60" cy="60"></circle>
-        <circle class="skill__circle skill__circle--bar" r="50" cx="60" cy="60" ref="circle" stroke-dashoffset="100"></circle>
-      </svg>
-    </div>
-  </div>
-</script><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
@@ -52,8 +25,9 @@
                     <div class="socials__icon inlined-svg-in"></div></a></li>
               </ul>
             </div>
-            <div class="header__menu"><a class="hamburger" href="">
-                <div class="inlined-svg-hamburger"></div></a></div>
+            <div class="header__menu">
+              <button class="hamburger hamburger--collapse" type="button" id="hamburger-menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            </div>
           </header>
           <div class="hero__content">
             <div class="hero__user-desc">
@@ -169,7 +143,6 @@
           </footer>
         </section>
       </div>
-      <!--include ./common/footer.pug-->
       <script type="text/x-template" id="skills-list">
         <ul class="skills">
           <li class="skills__item" v-for="skillsGroupObject in skills">
@@ -198,7 +171,24 @@
         </div>
       </script>
     </div>
-    <script src="bootloader.bundle.js"></script>
-    <script src="vendor.bundle.js"></script>
+    <div class="main-menu">
+      <div class="main-menu__left"></div>
+      <div class="main-menu__right"></div>
+      <div class="main-menu__content">
+        <ul class="menu-list">
+          <li class="menu-list__item"><a href="portfolio.html">
+              <h1 class="main-menu-item">Мои работы</h1></a></li>
+          <li class="menu-list__item"><a href="about.html">
+              <h1 class="main-menu-item">Обо мне</h1></a></li>
+          <li class="menu-list__item"><a href="blog.html">
+              <h1 class="main-menu-item">Блог</h1></a></li>
+          <li class="menu-list__item"><a href="index.html">
+              <h1 class="main-menu-item">Авторизация</h1></a></li>
+        </ul>
+      </div>
+    </div>
+    <!--script(src='bootloader.bundle.js')-->
+    <!--script(src='vendor.bundle.js')-->
+    <script src="hamburger_menu.bundle.js"></script>
   </body>
 </html>
